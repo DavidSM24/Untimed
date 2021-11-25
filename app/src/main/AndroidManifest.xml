@@ -4,13 +4,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/untimedicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/untimedicon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Untimed">
+        android:theme="@style/Theme.Untimed"
+        android:configChanges="orientation|keyboardHidden">
+
         <activity android:name=".MainActivity"
-                android:screenOrientation="landscape">
+                android:exported="true"
+                android:screenOrientation="fullSensor"
+            android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

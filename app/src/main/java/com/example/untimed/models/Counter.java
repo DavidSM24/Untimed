@@ -6,7 +6,8 @@ public class Counter {
     protected int seconds;
     protected int minutes;
     protected int hours;
-    protected boolean running;
+    protected boolean started;
+    protected boolean stoped;
 
     public Counter(){
         this.seconds=0;
@@ -14,6 +15,8 @@ public class Counter {
         this.hours=0;
 
         this.finalTime="00 : 00 : 00";
+        this.stoped=false;
+        this.started=false;
     }
 
     public String getFinalTime() {
@@ -44,16 +47,24 @@ public class Counter {
         return hours;
     }
 
-    public boolean isRunning() {
-        return running;
+    public boolean isStarted() {
+        return started;
     }
 
-    public void setRunning(boolean running) {
-        this.running = running;
+    public void setStarted(boolean started) {
+        this.started = started;
     }
 
     public void setHours(int hours) {
         this.hours = hours;
+    }
+
+    public boolean isStoped() {
+        return stoped;
+    }
+
+    public void setStoped(boolean stoped) {
+        this.stoped = stoped;
     }
 
     @Override
@@ -63,7 +74,8 @@ public class Counter {
                 ", seconds=" + seconds +
                 ", minutes=" + minutes +
                 ", hours=" + hours +
-                ", running=" + running +
+                ", running=" + started +
+                ", stoped=" + stoped +
                 '}';
     }
 }
